@@ -34,6 +34,7 @@ class ProductsController < ApplicationController
     else
       render :edit
     end
+  end
 
     def destroy
       @product = Product.find(params[:id])
