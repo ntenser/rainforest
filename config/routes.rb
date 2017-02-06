@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
+  resources :products do
+    resources :reviews, only: [:show, :create, :destroy]
 
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
